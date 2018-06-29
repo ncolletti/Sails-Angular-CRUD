@@ -27,6 +27,25 @@ module.exports.routes = {
   '/': {
     view: 'pages/homepage'
   },
+  'get /articles/list': 'ArticlesController.list',
+  'get /articles/add': 'ArticlesController.add',
+  'get /articles/edit/:id': 'ArticlesController.edit',
+  'post /articles/create': 'ArticlesController.create',
+  'post /articles/delete/:id': 'ArticlesController.delete',
+  'post /articles/update/:id': 'ArticlesController.update'
+
+  // ,
+  // '/articles':
+  // {
+  //   view: 'pages/articles'
+  // }
+  // don't want to use this yet, want to figure out how to access res object
+  // in articles controller and send it this way
+
+  // ,
+  // '/articles/list': {
+  //   view: 'pages/list'
+  // }
 
   /***************************************************************************
   *                                                                          *
